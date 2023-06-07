@@ -14,7 +14,8 @@ const CalendarHeader = () => {
         setMonthIndex(monthIndex + 1);
     }
     const handleReset = () => {
-        setMonthIndex(dayjs().month());
+        console.log(monthIndex);
+        setMonthIndex(monthIndex === dayjs().month() ? monthIndex + Math.random() : dayjs().month());
     }
     return (
         <>
