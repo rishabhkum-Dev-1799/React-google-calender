@@ -9,6 +9,7 @@ import { useGlobalContextState } from './context/GlobalContext';
 function App() {
   const [currentMonth, setCurrentMonth] = useState(fetchMonth());
   const { monthIndex } = useGlobalContextState();
+  console.log(monthIndex);
   useEffect(() => {
     setCurrentMonth(fetchMonth(monthIndex));
   }, [monthIndex]);
